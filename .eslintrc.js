@@ -27,5 +27,6 @@ module.exports = {
         usePrettierrc: true,
       },
     ],
+    'nuxt/no-cjs-in-config': 'off'
   },
 }
