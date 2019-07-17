@@ -1,12 +1,12 @@
 <template>
   <div class="header">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-6">
+    <b-row>
+      <b-col xl="6" lg="12" md="12" sm="12">
         <div class="illustration">
           <img src="~/static/app_4.jpg" class="img-responsive" alt>
         </div>
-      </div>
-      <div class="col-md-6 col-md-6 col-sm-6">
+      </b-col>
+      <b-col xl="6" lg="12" md="12" sm="12">
         <h1>Bootstrap Studio</h1>
         <p class="text-muted">
           A powerful desktop app for creating
@@ -14,12 +14,16 @@
           using the
           <strong>Bootstrap framework.</strong>
         </p>
-        <button id="run-browser-demo" class="btn btn-primary">
+        <b-button
+          id="run-browser-demo"
+          variant="primary"
+          class="d-md-none d-sm-none d-none"
+        >
           Run Browser Demo
-        </button>
-      </div>
-    </div>
-    <a href="#intro">
+        </b-button>
+      </b-col>
+    </b-row>
+    <a href="#intro" class="d-md-none d-sm-none d-none">
       <span class="btn-scroll" />
     </a>
   </div>
@@ -43,24 +47,12 @@ export default {}
     flex-grow: 1;
   }
   .illustration {
-    transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
-    max-width: 700px;
     margin-left: auto;
     .img-responsive {
       width: 100%;
     }
   }
-  .illustration::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #0c161f00 49%, #0c161f);
-    z-index: 10;
-    pointer-events: none;
-  }
+
   h1 {
     font-weight: 700;
     font-size: 48px;
@@ -69,6 +61,7 @@ export default {}
   .text-muted {
     font-size: 24px;
     font-weight: 400;
+    max-width: 515px;
     strong {
       color: $color-white;
     }
@@ -113,6 +106,49 @@ export default {}
     border-bottom: 1px solid #fff;
     transform: rotate(-45deg);
     position: absolute;
+  }
+  @media (max-width: 767px) {
+    .header {
+      padding: 100px 20px 40px;
+    }
+    .text-muted {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 1024px) {
+    h1 {
+      color: $color-white;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .text-muted {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #run-browser-demo {
+      top: 0;
+      margin: auto;
+    }
+  }
+  @media (min-width: 1024.2px) {
+    .illustration {
+      transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
+      max-width: 700px;
+    }
+    .illustration::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #0c161f00 49%, #0c161f);
+      z-index: 10;
+      pointer-events: none;
+    }
   }
 }
 </style>

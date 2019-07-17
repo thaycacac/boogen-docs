@@ -21,5 +21,4 @@ export default {
   color: $color-gray-700;
   @include text-center;
 }
-
 </style>

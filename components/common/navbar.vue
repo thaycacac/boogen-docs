@@ -1,31 +1,38 @@
 <template>
-  <div class="navbar">
-    <div class="container">
-      <div class="navbar-link">
-        <a href="#" class="navbar-logo">
+  <div>
+    <b-navbar toggleable="lg" type="dark">
+      <b-container>
+        <b-navbar-brand href="#">
           <img src="~/static/logo.png" width="40">
           Bootstrap Studio
-        </a>
-      </div>
-      <div class="navbar-menu d-none d-sm-block">
-        <a href="#" class="btn btn-primary btn-purchase navbar-right">Purchase</a>
-
-        <ul class="navbar-right">
-          <li class="menu-item">
-            <a href="#">Features</a>
-          </li>
-          <li class="menu-item">
-            <a href="#">Extras</a>
-          </li>
-          <li class="menu-item">
-            <a href="#">Tutorials</a>
-          </li>
-          <li class="menu-item">
-            <a href="#">Forums</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+        </b-navbar-brand>
+        <b-navbar-toggle target="nav-collapse" />
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#">
+              Features
+            </b-nav-item>
+            <b-nav-item-dropdown text="Extras" right>
+              <b-dropdown-item href="#">
+                Sites Platform
+              </b-dropdown-item>
+              <b-dropdown-item href="#">
+                Smart Forms
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-nav-item href="#">
+              Tutorials
+            </b-nav-item>
+            <b-nav-item href="#">
+              Forums
+            </b-nav-item>
+            <b-button variant="primary purchase" pill>
+              Purchase
+            </b-button>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-container>
+    </b-navbar>
   </div>
 </template>
 
@@ -38,6 +45,9 @@ ul {
 a:hover {
   text-decoration: none;
 }
+.navbar-dark .navbar-nav .nav-link {
+  color: $color-white !important;
+}
 .navbar {
   background-color: $color-gray-900;
   height: 70px;
@@ -45,30 +55,37 @@ a:hover {
   position: fixed;
   width: 100%;
   z-index: 9;
-  .navbar-logo {
+  .nav-link {
     color: $color-white;
-    font-size: 20px;
-    margin-left: -15px;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
   }
-  .navbar-logo:hover {
-    text-decoration: none !important;
-  }
-  .navbar-right {
-    display: block;
-    float: right;
-    li {
-      float: left;
-      color: $color-white;
-      padding: 10px 15px;
-    }
-    .menu-item a {
-      color: $color-white;
-    }
-  }
-  .btn-purchase {
-    border-radius: 17px;
-    padding: 9px;
+  .purchase {
     font-weight: 700;
+  }
+  .navbar-collapse {
+    background-color: $color-gray-900;
+    margin-left: -15px;
+    border-top: 1px solid $color-gray-900;
+    margin-top: 10px;
+  }
+  @media (max-width: 575.98px) {
+    .navbar-collapse {
+      padding-bottom: 1.5rem;
+      .purchase {
+        width: 7rem;
+        margin-left: 15px;
+      }
+    }
+  }
+  @media (max-width: 787.98px) {
+    .navbar-collapse {
+      padding-bottom: 1.5rem;
+      .purchase {
+        width: 7rem;
+        margin-left: 15px;
+      }
+    }
   }
 }
 </style>
