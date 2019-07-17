@@ -14,16 +14,12 @@
           using the
           <strong>Bootstrap framework.</strong>
         </p>
-        <b-button
-          id="run-browser-demo"
-          variant="primary"
-          class="d-md-none d-sm-none d-none"
-        >
+        <b-button id="run-browser-demo" variant="primary" class="d-none d-xl-block">
           Run Browser Demo
         </b-button>
       </b-col>
     </b-row>
-    <a href="#intro" class="d-md-none d-sm-none d-none">
+    <a href="#intro" class="d-none d-xl-block">
       <span class="btn-scroll" />
     </a>
   </div>
@@ -85,70 +81,83 @@ export default {}
     z-index: 1;
     opacity: 0.6;
   }
-  @-webkit-keyframes sdb {
-    0%,
-    40% {
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0);
-    }
-    20% {
-      -webkit-transform: translateY(10px);
-      transform: translateY(10px);
-    }
+}
+@-webkit-keyframes sdb {
+  0%,
+  40% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  .btn-scroll::before {
-    content: '';
-    top: 11px;
-    left: 14px;
-    width: 14px;
-    height: 14px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    transform: rotate(-45deg);
-    position: absolute;
+  20% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
   }
-  @media (max-width: 767px) {
-    .header {
-      padding: 100px 20px 40px;
+}
+.btn-scroll::before {
+  content: '';
+  top: 11px;
+  left: 14px;
+  width: 14px;
+  height: 14px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+}
+@media (max-width: 525px) {
+  .header {
+    padding: 100px 20px 40px;
+    h1 {
+      font-size: 32px;
     }
     .text-muted {
       font-size: 20px;
     }
   }
-  @media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+  .header {
     h1 {
-      color: $color-white;
-      text-align: center;
       font-size: 32px;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 20px;
     }
     .text-muted {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #run-browser-demo {
-      top: 0;
-      margin: auto;
+      font-size: 20px;
     }
   }
-  @media (min-width: 1024.2px) {
-    .illustration {
-      transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
-      max-width: 700px;
-    }
-    .illustration::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: linear-gradient(to right, #0c161f00 49%, #0c161f);
-      z-index: 10;
-      pointer-events: none;
-    }
+}
+@media (max-width: 1024px) {
+  h1 {
+    color: $color-white;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .text-muted {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #run-browser-demo {
+    top: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 1024.2px) {
+  .illustration {
+    transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
+    max-width: 700px;
+  }
+  .illustration::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #0c161f00 49%, #0c161f);
+    z-index: 10;
+    pointer-events: none;
   }
 }
 </style>
