@@ -12,14 +12,6 @@
             <b-nav-item href="#">
               Features
             </b-nav-item>
-            <b-nav-item-dropdown text="Extras" right>
-              <b-dropdown-item href="#">
-                Sites Platform
-              </b-dropdown-item>
-              <b-dropdown-item href="#">
-                Smart Forms
-              </b-dropdown-item>
-            </b-nav-item-dropdown>
             <b-nav-item href="#">
               Tutorials
             </b-nav-item>
