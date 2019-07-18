@@ -14,7 +14,7 @@
           using the
           <strong>Bootstrap framework.</strong>
         </p>
-        <b-button id="run-browser-demo" variant="primary" class="d-none d-xl-block">
+        <b-button variant="primary" class="run-browser-demo d-none d-xl-block">
           Run Browser Demo
         </b-button>
       </b-col>
@@ -62,7 +62,7 @@ export default {}
       color: $color-white;
     }
   }
-  #run-browser-demo {
+  .run-browser-demo {
     border-radius: 2rem;
     padding: 0.9em 1.2em 1em;
     line-height: 1;
@@ -77,12 +77,12 @@ export default {}
     height: 44px;
     border-radius: 50%;
     border: 1px solid #fff;
-    animation: sdb 2s infinite;
+    animation: updown 2s infinite;
     z-index: 1;
     opacity: 0.6;
   }
 }
-@-webkit-keyframes sdb {
+@-webkit-keyframes updown {
   0%,
   40% {
     -webkit-transform: translate(0, 0);
@@ -104,43 +104,71 @@ export default {}
   transform: rotate(-45deg);
   position: absolute;
 }
-@media (max-width: 525px) {
+@media (max-width: 575.98px) {
   .header {
     padding: 100px 20px 40px;
     h1 {
-      font-size: 32px;
+      font-size: 28px;
+      color: $color-white;
+      text-align: center;
+      padding-top: 15px;
     }
     .text-muted {
       font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   .header {
+    padding: 85px 20px 40px;
     h1 {
       font-size: 32px;
+      color: $color-white;
+      text-align: center;
+      padding-top: 15px;
     }
     .text-muted {
       font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
-@media (max-width: 1024px) {
-  h1 {
-    color: $color-white;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 20px;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header {
+    padding: 90px 20px 40px;
+    h1{
+      color: $color-white;
+      text-align: center;
+    }
+    .text-muted {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-  .text-muted {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #run-browser-demo {
-    top: 0;
-    margin: auto;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header {
+    padding: 95px 20px 40px;
+    h1 {
+      color: $color-white;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .text-muted {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .run-browser-demo {
+      top: 0;
+      margin: auto;
+    }
   }
 }
 @media (min-width: 1024.2px) {

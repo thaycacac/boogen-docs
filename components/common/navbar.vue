@@ -9,7 +9,7 @@
         <b-navbar-toggle target="nav-collapse" />
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#">
+            <b-nav-item href="#" class="my-nav-link">
               Features
             </b-nav-item>
             <b-nav-item href="#">
@@ -37,9 +37,6 @@ ul {
 a:hover {
   text-decoration: none;
 }
-.navbar-dark .navbar-nav .nav-link {
-  color: $color-white !important;
-}
 .navbar {
   background-color: $color-gray-900;
   height: 70px;
@@ -51,6 +48,9 @@ a:hover {
     color: $color-white;
     padding-right: 0.8rem;
     padding-left: 0.8rem;
+  }
+  .my-nav-link{
+    color: $color-white;
   }
   .purchase {
     font-weight: 700;
