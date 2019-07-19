@@ -21,7 +21,6 @@
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "pretty-quick --staged",
       "yarn lintfix",
       "git add"
     ]

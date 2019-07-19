@@ -1,10 +1,7 @@
 <template>
-  <b-container>
-    <p class="title">
-      Hello world!!!
-    </p>
+  <div>
     <Header />
-  </b-container>
+  </div>
 </template>
 
 <script>
