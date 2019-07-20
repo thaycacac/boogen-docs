@@ -3,7 +3,11 @@
     <b-row>
       <b-col xl="6" lg="12" md="12" sm="12">
         <div class="illustration">
-          <img src="~/static/app_4.jpg" class="img-responsive" alt>
+          <img
+            :src="require('@/assets/images/home/header.jpg')"
+            class="img-responsive"
+            alt="image background"
+          >
         </div>
       </b-col>
       <b-col xl="6" lg="12" md="12" sm="12">
@@ -35,7 +39,6 @@ export default {}
 .header {
   background-color: $color-gray-900;
   padding: 65px 60px 60px;
-  min-height: 32rem;
   position: relative;
   .row {
     display: flex;
@@ -43,9 +46,8 @@ export default {}
     flex-grow: 1;
   }
   .illustration {
-    margin-left: auto;
     .img-responsive {
-      width: 100%;
+      width: 98%;
     }
   }
 
@@ -139,7 +141,7 @@ export default {}
 @media (min-width: 768px) and (max-width: 991.98px) {
   .header {
     padding: 90px 20px 40px;
-    h1{
+    h1 {
       color: $color-white;
       text-align: center;
     }
@@ -172,20 +174,27 @@ export default {}
   }
 }
 @media (min-width: 1024.2px) {
-  .illustration {
-    transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
-    max-width: 700px;
-  }
-  .illustration::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #0c161f00 49%, #0c161f);
-    z-index: 10;
-    pointer-events: none;
+  .header {
+    height: 100vh;
+    .illustration {
+      transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
+      max-width: 700px;
+      .img-responsive {
+        margin-top: 4rem;
+        width: 98%;
+      }
+    }
+    .illustration::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #0c161f00 49%, #0c161f);
+      z-index: 10;
+      pointer-events: none;
+    }
   }
 }
 </style>

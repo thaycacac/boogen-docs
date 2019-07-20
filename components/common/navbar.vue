@@ -49,7 +49,7 @@ a:hover {
     padding-right: 0.8rem;
     padding-left: 0.8rem;
   }
-  .my-nav-link{
+  .my-nav-link {
     color: $color-white;
   }
   .purchase {
