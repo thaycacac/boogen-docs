@@ -3,7 +3,11 @@
     <b-row>
       <b-col xl="6" lg="12" md="12" sm="12">
         <div class="illustration">
-          <img src="~/static/app_4.jpg" class="img-responsive" alt>
+          <img
+            :src="require('@/assets/images/home/header.jpg')"
+            class="img-responsive"
+            alt="image background"
+          >
         </div>
       </b-col>
       <b-col xl="6" lg="12" md="12" sm="12">
@@ -35,7 +39,7 @@ export default {}
 .header {
   background-color: $color-gray-900;
   padding: 65px 60px 60px;
-  min-height: 32rem;
+  height: 100vh;
   position: relative;
   .row {
     display: flex;
@@ -43,9 +47,9 @@ export default {}
     flex-grow: 1;
   }
   .illustration {
-    margin-left: auto;
     .img-responsive {
-      width: 100%;
+      margin-top: 4rem;
+      width: 98%;
     }
   }
 
@@ -139,7 +143,7 @@ export default {}
 @media (min-width: 768px) and (max-width: 991.98px) {
   .header {
     padding: 90px 20px 40px;
-    h1{
+    h1 {
       color: $color-white;
       text-align: center;
     }
