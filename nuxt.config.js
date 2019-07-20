@@ -16,12 +16,13 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { 
-      //   rel: 'stylesheet', 
-      //   href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
-      //   integrity: 'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm',
-      //   crossorigin: 'anonymous'
-      // }
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.4.2/css/all.css',
+        integrity:
+          'sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns',
+        crossorigin: 'anonymous'
+      },
     ]
   },
   /*

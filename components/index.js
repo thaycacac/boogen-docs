@@ -1,5 +1,5 @@
 export { default as Navbar } from './common/navbar.vue'
-
 export { default as Header } from './header'
-
 export { default as Intro } from './intro'
+export { default as Version } from './intro/version.vue'
+export { default as Interface } from './interface'

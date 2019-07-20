@@ -1,15 +1,24 @@
 <template>
   <div>
     <Header />
+    <Intro />
+    <Version />
+    <Interface />
   </div>
 </template>
 
 <script>
-import { Header } from '~/components'
+import { Header , Intro , Version , Interface } from '~/components'
+
+
+
 
 export default {
   components: {
     Header,
+    Intro,
+    Version,
+    Interface,
   },
 }
 </script>
