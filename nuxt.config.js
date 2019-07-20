@@ -11,18 +11,16 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { 
-      //   rel: 'stylesheet', 
-      //   href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
-      //   integrity: 'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm',
-      //   crossorigin: 'anonymous'
-      // }
-    ]
+      {
+        href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -31,7 +29,9 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/css/main.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -45,7 +45,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
   /*
    ** Axios module configuration
@@ -59,6 +59,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 }
