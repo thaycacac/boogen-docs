@@ -1,35 +1,27 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark">
+    <!-- <b-navbar toggleable="lg" type="dark">
       <b-container>
         <b-navbar-brand href="#">
-          <img src="~/static/logo.png" width="40">
+          <img src="~/static/logo.png" width="40" />
           Bootstrap Studio
         </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse" />
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#" class="my-nav-link">
-              Features
-            </b-nav-item>
-            <b-nav-item href="#">
-              Tutorials
-            </b-nav-item>
-            <b-nav-item href="#">
-              Forums
-            </b-nav-item>
-            <b-button variant="primary purchase" pill>
-              Purchase
-            </b-button>
+            <b-nav-item href="#" class="my-nav-link">Features</b-nav-item>
+            <b-nav-item href="#">Tutorials</b-nav-item>
+            <b-nav-item href="#">Forums</b-nav-item>
+            <b-button variant="primary purchase" pill>Purchase</b-button>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
-    </b-navbar>
+    </b-navbar>-->
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
 
 ul {
   list-style: none;
