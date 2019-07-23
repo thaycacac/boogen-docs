@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "My impressive Nuxt.js project",
   "author": "thaycacac | phatto pham",
+  "engines": {
+    "node": "v8.12.0",
+    "yarn": "1.9.4",
+    "npm": "6.4.1"
+  },
   "private": true,
   "scripts": {
     "test": "jest",
