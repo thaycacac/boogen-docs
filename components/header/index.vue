@@ -120,6 +120,9 @@ $height: 100vh;
 .title {
   font-size: $unit * 1.4;
   color: $color-primary;
+  @media (max-width: 768px) {
+    font-size: $unit;
+  }
 }
 
 .small {
