@@ -1,195 +1,166 @@
 <template>
-  <div class="header">
-    <b-row>
-      <b-col xl="6" lg="12" md="12" sm="12">
-        <div class="illustration">
-          <img
-            :src="require('@/assets/images/home/header.jpg')"
-            class="img-responsive"
-            alt="image background"
+  <div class="wrap-all">
+    <div class="container">
+      <b-row class="wrap-top">
+        <b-col class="d-flex justify-content-center flex-column" sm="12" xs="12" md="6" lg="6">
+          <h2 class="title font-weight-bold">
+            {{ title }}
+          </h2>
+          <h1 class="large font-weight-light mt-3 mb-4">
+            {{ slogan }}
+          </h1>
+          <h3
+            class="small font-weight-light"
           >
-        </div>
-      </b-col>
-      <b-col xl="6" lg="12" md="12" sm="12">
-        <h1>Bootstrap Studio</h1>
-        <p class="text-muted">
-          A powerful desktop app for creating
-          <strong>responsive websites</strong>
-          using the
-          <strong>Bootstrap framework.</strong>
-        </p>
-        <b-button variant="primary" class="run-browser-demo d-none d-xl-block">
-          Run Browser Demo
-        </b-button>
-      </b-col>
-    </b-row>
-    <a href="#intro" class="d-none d-xl-block">
-      <span class="btn-scroll" />
-    </a>
+            {{ description }}
+          </h3>
+          <b-button squared variant="primary mt-3 button">
+            Download it for free
+          </b-button>
+        </b-col>
+        <b-col class="wrap-slide d-flex flex-column justify-content-center" sm="12" xs="12" md="6" lg="6">
+          <img
+            :src="require('@/assets/images/header/slider1.png')"
+            alt="image slide 1"
+            class="slide-1"
+          >
+          <img
+            :src="require('@/assets/images/header/slider2.png')"
+            alt="image slide 2"
+            class="slide-2 position-absolute hidden-md-down"
+          >
+          <img
+            :src="require('@/assets/images/header/slider3.png')"
+            alt="image slide 3"
+            class="slide-3 position-absolute hidden-md-down"
+          >
+        </b-col>
+      </b-row>
+      <b-row class="wrap-bottom">
+        <b-col>Work with</b-col>
+        <b-col>
+          <img
+            :src="require('@/assets/images/header/bootstrap.png')"
+            alt="logo bootstrap"
+            class="image-oran"
+          >
+        </b-col>
+        <b-col>
+          <img
+            :src="require('@/assets/images/header/sass.png')"
+            alt="logo sass"
+            class="image-oran"
+          >
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      title: 'Bootstrap 4 builder',
+      slogan: 'Design, build and deploy web pages in a flow.',
+      description: 'Pingendo is a modern tool for designers, developers sand web agencies. Intuitive as stacking blocks, powerful as a text editor.'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_sizes.scss';
+@import '~/assets/scss/_mixins.scss';
 
-.header {
-  background-color: $color-gray-900;
-  padding: 65px 60px 60px;
-  height: 100vh;
-  position: relative;
-  .row {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-  }
-  .illustration {
-    .img-responsive {
-      margin-top: 4rem;
-      width: 98%;
-    }
-  }
+$height: 100vh;
 
-  h1 {
-    font-weight: 700;
-    font-size: 48px;
-    color: $color-white;
+.wrap-all {
+  height: $height;
+  background: url('~assets/images/header/background.jpg');
+  background-size: cover;
+  .wrap-top {
+    height: calc(100vh - 50px);
   }
-  .text-muted {
-    font-size: 24px;
-    font-weight: 400;
-    max-width: 515px;
-    strong {
-      color: $color-white;
-    }
+  .wrap-bottom {
+    height: 50px;
   }
-  .run-browser-demo {
-    border-radius: 2rem;
-    padding: 0.9em 1.2em 1em;
-    line-height: 1;
-    font-weight: 700;
+}
+
+.wrap-slide {
+  transform: perspective(1000px) rotateY(-20deg) translateX(-20px);
+  @media (max-width: 768px) {
+    transform: none;
   }
-  .btn-scroll {
+  .slide-1 {
+    width: 500px;
+    animation: slide-1 7s ease-in-out infinite;
+    @include box-shadow;
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    width: 44px;
-    margin-left: -22px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    animation: updown 2s infinite;
-    z-index: 1;
-    opacity: 0.6;
-  }
-}
-@-webkit-keyframes updown {
-  0%,
-  40% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  20% {
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-}
-.btn-scroll::before {
-  content: '';
-  top: 11px;
-  left: 14px;
-  width: 14px;
-  height: 14px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transform: rotate(-45deg);
-  position: absolute;
-}
-@media (max-width: 575.98px) {
-  .header {
-    padding: 100px 20px 40px;
-    h1 {
-      font-size: 28px;
-      color: $color-white;
-      text-align: center;
-      padding-top: 15px;
-    }
-    .text-muted {
-      font-size: 20px;
-      margin-left: auto;
-      margin-right: auto;
+    @media (max-width: 768px) {
+      position: relative;
+      width: 100%;
     }
   }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .header {
-    padding: 85px 20px 40px;
-    h1 {
-      font-size: 32px;
-      color: $color-white;
-      text-align: center;
-      padding-top: 15px;
-    }
-    .text-muted {
-      font-size: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .slide-2 {
+    left: -40px;
+    width: 90px;
+    animation: slide-1 5s ease-in-out infinite;
+    @include box-shadow;
   }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .header {
-    padding: 90px 20px 40px;
-    h1 {
-      color: $color-white;
-      text-align: center;
-    }
-    .text-muted {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .slide-3 {
+    right: -85px;
+    width: 230px;
+    animation: slide-2 4s ease-in-out infinite;
+    @include box-shadow;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .header {
-    padding: 95px 20px 40px;
-    h1 {
-      color: $color-white;
-      text-align: center;
-      font-size: 32px;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-    .text-muted {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .run-browser-demo {
-      top: 0;
-      margin: auto;
-    }
+.title {
+  font-size: $unit * 1.4;
+  color: $color-primary;
+}
+
+.small {
+  font-size: $unit;
+}
+
+.button {
+  width: 220px;
+}
+
+.image-oran {
+  height: 30px;
+}
+
+.hidden-md-down {
+  @media (max-width: 992px) {
+    display: none;
   }
 }
-@media (min-width: 1024.2px) {
-  .illustration {
-    transform: perspective(2000px) rotateY(36deg) scale(1.25) translateX(40px);
-    max-width: 700px;
+
+@keyframes slide-1 {
+  0% {
+    transform: translateX(0) translateY(5px);
   }
-  .illustration::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #0c161f00 49%, #0c161f);
-    z-index: 10;
-    pointer-events: none;
+  50% {
+    transform: translateX(0) translateY(-5px);
+  }
+  100% {
+    transform: translateX(0) translateY(5px);
+  }
+}
+
+@keyframes slide-2 {
+  0% {
+    transform: translateX(0) translateY(10px);
+  }
+  50% {
+    transform: translateX(0) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(10px);
   }
 }
 </style>

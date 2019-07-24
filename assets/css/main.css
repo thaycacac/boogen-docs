@@ -1,3 +1,7 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Comfortaa', cursive;
+}
+
+.cursor-poiter {
+  cursor: pointer;
 }
