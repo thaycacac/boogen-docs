@@ -1,7 +1,7 @@
 <template>
   <div class="interface">
-    <h3>The Interface</h3>
-    <p>Bootstrap Studio has a beautiful and powerful interface, which is built around the simplicity of drag and drop. This makes it the perfect tool for prototyping and designing web pages and apps.</p>
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
     <div class="container interface-img">
       <img
         :src="require('@/assets/images/home/header.jpg')"
@@ -15,58 +15,59 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      title: 'The Interface',
+      description:
+        'Bootstrap Studio has a beautiful and powerful interface, which is built around the simplicity of drag and drop. This makes it the perfect tool for prototyping and designing web pages and apps.',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_sizes.scss';
+@import '~/assets/scss/_mixins.scss';
+
 .interface {
   padding: 50px 0px;
   h3 {
-    font-weight: 700;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
+    @include title-700;
+    @include text-center;
+    margin-bottom: $margin-unit;
   }
   p {
-    text-align: center;
-    font-size: 18px;
-    color: #59697d;
-    line-height: 1.5;
-    margin: 0 auto 50px;
-    max-width: 600px;
-    font-weight: 400;
+    @include text-muted(#59697d);
+    max-width: $max-width-unit;
+    @media (max-width: 575.98px) {
+      @include container;
+    }
   }
   .interface-img {
     position: relative;
-  }
-  .img-responsive {
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  }
-  .circle {
-    width: 25px;
-    height: 25px;
-    background: linear-gradient(135deg, #6d90fb, #335fe9);
-    border-radius: 50%;
-    position: absolute;
-    top: 30px;
-    left: 55%;
+    .img-responsive {
+      @include full-size;
+      @include box-shadow;
+    }
+    .circle {
+      width: 25px;
+      height: 25px;
+      background: linear-gradient(135deg, #6d90fb, #335fe9);
+      border-radius: 50%;
+      position: absolute;
+      top: 30px;
+      left: 55%;
+    }
+    .ringring {
+      animation: pulsate 2s ease-out;
+      animation-iteration-count: infinite;
+      @include circle-pulsate;
+    }
   }
 
-  .ringring {
-    border: 10px solid #8abdb8;
-    -webkit-border-radius: 30px;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 28px;
-    left: 54.9%;
-    -webkit-animation: pulsate 2s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    opacity: 0;
-  }
-  @-webkit-keyframes pulsate {
+  @keyframes pulsate {
     0% {
       -webkit-transform: scale(0.1, 0.1);
       opacity: 0;

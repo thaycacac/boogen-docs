@@ -1,57 +1,45 @@
 <template>
   <div class="templates">
-    <h3>Beautiful Templates</h3>
-    <p>The app comes with a number of premium, fully responsive templates that you can customize. Each template consists of multiple pages and widgets you can pick-and-match into the perfect website.</p>
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          Slide 1
-        </div>
-        <div class="swiper-slide">
-          Slide 2
-        </div>
-        <div class="swiper-slide">
-          Slide 3
-        </div>...
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination" />
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev" />
-      <div class="swiper-button-next" />
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar" />
-    </div>
+    <h3>
+      {{ title }}
+    </h3>
+    <p>
+      {{ description }}
+    </p>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data(){
+    return{
+      title: 'Beautiful Templates',
+      description: 'The app comes with a number of premium, fully responsive templates that you can customize. Each template consists of multiple pages and widgets you can pick-and-match into the perfect website.'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_sizes.scss';
+@import '~/assets/scss/_mixins.scss';
+
 .templates {
-  background-color: #3d7aef;
+  background-color: $color-blue;
   color: $color-white;
-  padding-top: 40px;
+  padding-top: $padding-unit;
   h3 {
-    font-weight: 700;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
+    @include title-700;
+    @include text-center;
   }
   p {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0 auto 50px;
-    max-width: 600px;
-    font-weight: 400;
+    @include text-muted(#fff);
+    max-width: $max-width-unit;
+    @media (max-width: 575.98px) {
+      padding-top: $padding-unit;
+      @include container;
+    }
   }
 }
 </style>

@@ -24,69 +24,44 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_sizes.scss';
+@import '~/assets/scss/_mixins.scss';
 
 .version {
-  background-color: #f4f8fb;
+  background-color: $color-gray-200;
+  @media (max-width: 767.98px) {
+    @include container;
+  }
   section {
-    padding-top: 60px;
-    text-align: center;
-    max-width: 800px;
+    padding-top: $padding-unit * 1.5;
+    max-width: $max-width-unit * 1.34;
     margin: 0 auto;
+    @media (max-width: 767.98px) {
+      padding-top: $padding-unit;
+    }
     h3 {
-      max-width: 480px;
-      margin: 0 auto 50px;
-      line-height: 1.45;
-      font-size: 25px;
-      text-align: left;
-      font-weight: 300;
+      max-width: $max-width-unit * 1.11;
+      @include title-left-300;
+
+      @media (max-width: 767.98px) {
+        @include text-center;
+      }
       .icon-check {
         font-size: 56px;
         font-weight: 700;
-        color: #2789e4;
-        float: left;
-        margin-top: 9px;
-        margin-right: 22px;
+        @include icon-left;
       }
     }
     .youtube {
-      padding-bottom: 30px;
+      padding-bottom: $padding-unit * 0.75;
       height: 450px;
+      @include height-media;
       .responsive-youtube {
-        width: 100%;
-        height: 100%;
+        @include full-size;
       }
     }
   }
 }
-@media (max-width: 575.98px) {
-  .version {
-    padding-left: 15px;
-    padding-right: 15px;
-    section {
-       padding-top: 40px;
-      h3 {
-        text-align: center;
-      }
-      .youtube {
-        height: 230px !important;
-      }
-    }
-  }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .version {
-    padding-left: 15px;
-    padding-right: 15px;
-    section {
-      padding-top: 30px;
-      h3 {
-        text-align: center;
-      }
-      .youtube {
-        height: 350px !important;
-      }
-    }
-  }
-}
+
 </style>

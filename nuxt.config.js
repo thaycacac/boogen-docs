@@ -24,12 +24,10 @@ module.exports = {
         crossorigin: 'anonymous'
       },
       {
-
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap',
+        href: 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap',
         rel: 'stylesheet',
       },
       {
-
         href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css',
         rel: 'stylesheet',
       },
@@ -48,9 +46,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/css/main.css'
-  ],
+  css: ['@/assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
