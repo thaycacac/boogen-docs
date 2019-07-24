@@ -28,6 +28,16 @@ module.exports = {
         href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap',
         rel: 'stylesheet',
       },
+      {
+
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css',
+        rel: 'stylesheet',
+      },
+    ],
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'
+      },
     ],
 
   },
