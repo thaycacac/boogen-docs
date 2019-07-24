@@ -1,41 +1,41 @@
 <template>
-  <div>
-    <!-- <b-navbar toggleable="lg" type="dark">
-      <b-container>
-        <b-navbar-brand href="#">
-          <img src="~/static/logo.png" width="40" />
-          Bootstrap Studio
-        </b-navbar-brand>
-        <b-navbar-toggle target="nav-collapse" />
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#" class="my-nav-link">Features</b-nav-item>
-            <b-nav-item href="#">Tutorials</b-nav-item>
-            <b-nav-item href="#">Forums</b-nav-item>
-            <b-button variant="primary purchase" pill>Purchase</b-button>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-container>
-    </b-navbar>-->
-  </div>
+  <b-navbar toggleable="lg" type="dark">
+    <b-container>
+      <b-navbar-brand href="#">
+        <img src="~/static/logo.png" width="25">
+        Boogen
+      </b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse" />
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item href="#" class="my-nav-link">
+            Features
+          </b-nav-item>
+          <b-nav-item href="#">
+            Tutorials
+          </b-nav-item>
+          <b-nav-item href="#">
+            Forums
+          </b-nav-item>
+          <b-button variant="primary" pill>
+            Purchase
+          </b-button>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-container>
+  </b-navbar>
 </template>
 
 <style lang="scss" scoped>
 @import '~/assets/scss/_variables.scss';
 
-ul {
-  list-style: none;
-}
-a:hover {
-  text-decoration: none;
-}
 .navbar {
   background-color: $color-gray-900;
-  height: 70px;
+  height: 60px;
   top: 0;
   position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 999;
   .nav-link {
     color: $color-white;
     padding-right: 0.8rem;
@@ -44,31 +44,19 @@ a:hover {
   .my-nav-link {
     color: $color-white;
   }
-  .purchase {
-    font-weight: 700;
-  }
   .navbar-collapse {
     background-color: $color-gray-900;
     margin-left: -15px;
     border-top: 1px solid $color-gray-900;
-    margin-top: 10px;
   }
   @media (max-width: 575.98px) {
     .navbar-collapse {
       padding-bottom: 1.5rem;
-      .purchase {
-        width: 7rem;
-        margin-left: 15px;
-      }
     }
   }
   @media (max-width: 787.98px) {
     .navbar-collapse {
       padding-bottom: 1.5rem;
-      .purchase {
-        width: 7rem;
-        margin-left: 15px;
-      }
     }
   }
 }
