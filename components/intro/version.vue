@@ -24,7 +24,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
 
 .version {
   background-color: #f4f8fb;

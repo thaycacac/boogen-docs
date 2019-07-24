@@ -24,7 +24,6 @@ module.exports = {
         crossorigin: 'anonymous'
       },
       {
-
         href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap',
         rel: 'stylesheet',
       },
@@ -38,9 +37,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/css/main.css'
-  ],
+  css: ['@/assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */

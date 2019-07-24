@@ -24,7 +24,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_mixins.scss';
 
 .title {
   color: $color-gray-700;

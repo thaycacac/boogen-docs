@@ -15,7 +15,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
 .centered {
   max-width: 800px;
   text-align: center;

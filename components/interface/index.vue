@@ -10,7 +10,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
 .interface {
   padding-top: 50px;
   h3 {
