@@ -1,15 +1,23 @@
 <template>
   <div>
     <Header />
+    <Intro />
+    <Version />
+    <Interface />
+    <Templates />
   </div>
 </template>
 
 <script>
-import { Header } from '~/components'
+import { Header , Intro , Version , Interface , Templates } from '~/components'
 
 export default {
   components: {
     Header,
+    Intro,
+    Version,
+    Interface,
+    Templates,
   },
 }
 </script>

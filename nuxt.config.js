@@ -17,10 +17,27 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.4.2/css/all.css',
+        integrity:
+          'sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns',
+        crossorigin: 'anonymous'
+      },
+      {
         href: 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap',
         rel: 'stylesheet',
       },
+      {
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css',
+        rel: 'stylesheet',
+      },
     ],
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'
+      },
+    ],
+
   },
   /*
    ** Customize the progress-bar color
@@ -57,6 +74,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) { },
   },
 }
