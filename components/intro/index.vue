@@ -1,10 +1,10 @@
 <template>
   <div id="intro" class="container">
     <section class="centered intro">
-      <h1 class="text-center">
+      <h1 class="text-center title">
         {{ title }}
       </h1>
-      <p>
+      <p class="description">
         {{ description }}
       </p>
     </section>
@@ -33,13 +33,13 @@ export default {
   text-align: center;
 }
 section {
-  margin: 80px auto;
+  margin: $margin-unit * 2 auto;
   @media (max-width: 575.98px) {
-    margin: 50px auto;
+    margin: $margin-unit * 1.25 auto;
   }
-  h1 {
+  .title {
     max-width: $max-width-unit;
-    margin: 0 auto 50px;
+    margin: 0 auto $margin-unit * 1.25;
     @include title-700;
 
     @media (max-width: 575.98px) {
@@ -47,7 +47,7 @@ section {
       font-size: $unit * 1.75;
     }
   }
-  p {
+  .description {
     @include text-muted(#59697d);
   }
 }

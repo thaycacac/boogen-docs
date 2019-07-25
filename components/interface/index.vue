@@ -1,7 +1,11 @@
 <template>
   <div class="interface">
-    <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
+    <h3 class="title">
+      {{ title }}
+    </h3>
+    <p class="description">
+      {{ description }}
+    </p>
     <div class="container interface-img">
       <img
         :src="require('@/assets/images/home/header.jpg')"
@@ -31,14 +35,16 @@ export default {
 @import '~/assets/scss/_sizes.scss';
 @import '~/assets/scss/_mixins.scss';
 
+$width-unit: 25px;
+
 .interface {
-  padding: 50px 0px;
-  h3 {
+  padding: $width-unit * 2 0px;
+  .title {
     @include title-700;
     @include text-center;
     margin-bottom: $margin-unit;
   }
-  p {
+  .description {
     @include text-muted(#59697d);
     max-width: $max-width-unit;
     @media (max-width: 575.98px) {
@@ -52,12 +58,12 @@ export default {
       @include box-shadow;
     }
     .circle {
-      width: 25px;
-      height: 25px;
+      width: $width-unit;
+      height: $width-unit;
       background: linear-gradient(135deg, #6d90fb, #335fe9);
       border-radius: 50%;
       position: absolute;
-      top: 30px;
+      top: $width-unit * 1.2;
       left: 55%;
     }
     .ringring {

@@ -1,9 +1,9 @@
 <template>
   <div class="templates">
-    <h3>
+    <h3 class="title">
       {{ title }}
     </h3>
-    <p>
+    <p class="description">
       {{ description }}
     </p>
   </div>
@@ -29,11 +29,11 @@ export default {
   background-color: $color-blue;
   color: $color-white;
   padding-top: $padding-unit;
-  h3 {
+  .title {
     @include title-700;
     @include text-center;
   }
-  p {
+  .description {
     @include text-muted(#fff);
     max-width: $max-width-unit;
     @media (max-width: 575.98px) {

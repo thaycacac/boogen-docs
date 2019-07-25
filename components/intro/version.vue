@@ -1,11 +1,11 @@
 <template>
   <div class="version">
     <section class="centered">
-      <h3>
+      <h3 class="title">
         <i class="far fa-check-circle icon-check d-none d-xl-block" />
-        <strong>Bootstrap Studio 4.5.2</strong>
-        is here! See what's new on our
-        <a href="#" target="_blank">releases page »</a>
+        <strong>{{ strong }}</strong>
+        {{ text }}
+        <a href="#" target="_blank">{{ link }}</a>
       </h3>
       <div class="youtube">
         <iframe
@@ -20,7 +20,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      strong: 'Bootstrap Studio 4.5.2',
+      text: "is here! See what's new on our",
+      link: 'releases page »',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -28,6 +36,7 @@ export default {}
 @import '~/assets/scss/_sizes.scss';
 @import '~/assets/scss/_mixins.scss';
 
+$font-weght: 350;
 .version {
   background-color: $color-gray-200;
   @media (max-width: 767.98px) {
@@ -40,28 +49,36 @@ export default {}
     @media (max-width: 767.98px) {
       padding-top: $padding-unit;
     }
-    h3 {
+    .title {
       max-width: $max-width-unit * 1.11;
-      @include title-left-300;
+      margin: 0 auto 50px;
+      line-height: 1.45;
+      font-size: $unit * 1.56;
+      text-align: left;
+      font-weight: $font-weght;
 
       @media (max-width: 767.98px) {
         @include text-center;
       }
       .icon-check {
-        font-size: 56px;
-        font-weight: 700;
+        font-size: $unit * 3.5;
+        font-weight: $font-weght * 2;
         @include icon-left;
       }
     }
     .youtube {
       padding-bottom: $padding-unit * 0.75;
-      height: 450px;
-      @include height-media;
+      height: $max-width-unit * 0.75;
+      @media (max-width: 575.98px) {
+        height: $max-width-unit * 0.38 !important;
+      }
+      @media (max-width: 767.98px) {
+        height: $max-width-unit * 0.58 !important;
+      }
       .responsive-youtube {
         @include full-size;
       }
     }
   }
 }
-
 </style>

@@ -50,28 +50,11 @@
   padding-right: 15px;
 }
 
-@mixin title-left-300() {
-  margin: 0 auto 50px;
-  line-height: 1.45;
-  font-size: 25px;
-  text-align: left;
-  font-weight: 300;
-}
-
 @mixin icon-left() {
   color: #2789e4;
   float: left;
   margin-top: 9px;
   margin-right: 22px;
-}
-
-@mixin height-media() {
-  @media (max-width: 575.98px) {
-    height: 230px !important;
-  }
-  @media (max-width: 767.98px) {
-    height: 350px !important;
-  }
 }
 
 @mixin full-size() {
