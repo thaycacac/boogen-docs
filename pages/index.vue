@@ -5,11 +5,14 @@
     <Version />
     <Interface />
     <Templates />
+    <Beautiful />
+    <Realtime />
+    <EditCode />
   </div>
 </template>
 
 <script>
-import { Header , Intro , Version , Interface , Templates } from '~/components'
+import { Header , Intro , Version , Interface , Templates, Beautiful, Realtime, EditCode } from '~/components'
 
 export default {
   components: {
@@ -18,6 +21,9 @@ export default {
     Version,
     Interface,
     Templates,
+    Beautiful,
+    Realtime,
+    EditCode,
   },
 }
 </script>
