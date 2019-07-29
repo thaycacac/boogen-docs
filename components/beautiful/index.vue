@@ -12,10 +12,10 @@
           <i class="fas fa-directions icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_1 }}
+              {{ headSmart }}
             </h4>
             <p class="text">
-              {{ text_1 }}
+              {{ textSmart }}
             </p>
           </div>
         </b-col>
@@ -23,10 +23,10 @@
           <i class="fas fa-asterisk icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_2 }}
+              {{ headCreate }}
             </h4>
             <p class="text">
-              {{ text_2 }}
+              {{ textCreate }}
             </p>
           </div>
         </b-col>
@@ -34,10 +34,10 @@
           <i class="fas fa-link icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_1 }}
+              {{ headSmart }}
             </h4>
             <p class="text">
-              {{ text_1 }}
+              {{ textSmart }}
             </p>
           </div>
         </b-col>
@@ -45,10 +45,10 @@
           <i class="fas fa-folder icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_2 }}
+              {{ headCreate }}
             </h4>
             <p class="text">
-              {{ text_2 }}
+              {{ textCreate }}
             </p>
           </div>
         </b-col>
@@ -64,11 +64,11 @@ export default {
       title: 'Beautiful Components',
       description:
         'Bootstrap Studio comes with a large number of pretty components for building responsive pages. We  slideshows and even basic elements like spans and divs. See some of them below.',
-      head_1: 'Smart Drag & Drop',
-      head_2: 'Create Your Own Components',
-      text_1:
+      headSmart: 'Smart Drag & Drop',
+      headCreate: 'Create Your Own Components',
+      textSmart:
         'Bootstrap Studio knows which Bootstrap components can be nested in one another and gives you suggestions. It automatically generates beautiful HTML for you, which looks as if it was written by hand by an expert.',
-      text_2:
+      textCreate:
         'You can extract pieces of your designs as Custom Components, and have them ready to be dropped into any design you create. You can also export these components as files and share them.',
     }
   },

@@ -19,10 +19,10 @@
           <i class="far fa-folder-open icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_1 }}
+              {{ headAdvanced }}
             </h4>
             <p class="text">
-              {{ text_1 }}
+              {{ textAdvanced }}
             </p>
           </div>
         </b-col>
@@ -30,10 +30,10 @@
           <i class="far fa-folder-open icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_2 }}
+              {{ headJS }}
             </h4>
             <p class="text">
-              {{ text_2 }}
+              {{ textJS }}
             </p>
           </div>
         </b-col>
@@ -41,10 +41,10 @@
           <i class="far fa-folder-open icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_3 }}
+              {{ headHTML }}
             </h4>
             <p class="text">
-              {{ text_3 }}
+              {{ textHTML }}
             </p>
           </div>
         </b-col>
@@ -52,10 +52,10 @@
           <i class="far fa-folder-open icon d-none d-md-block" />
           <div class="item-detail">
             <h4 class="head">
-              {{ head_4 }}
+              {{ headImport }}
             </h4>
             <p class="text">
-              {{ text_4 }}
+              {{ textImport }}
             </p>
           </div>
         </b-col>
@@ -71,16 +71,16 @@ export default {
       title: 'Editing Code',
       description:
         'For some things drag and drop isn\'t enough. This is why Bootstrap Studio gives you full control over your markup when you need it. You can import and edit CSS, SASS, JavaScript and HTML in our Sublime Text-like editor.',
-      head_1: 'Advanced CSS and SASS Editors',
-      head_2: 'JavaScript Editing',
-      head_3: 'HTML Editing',
-      head_4: 'Import Existing Websites',
-      text_1:
+      headAdvanced: 'Advanced CSS and SASS Editors',
+      headJS: 'JavaScript Editing',
+      headHTML: 'HTML Editing',
+      headImport: 'Import Existing Websites',
+      textAdvanced:
         'Our advanced CSS editing interface supports auto suggest and rule validation, and shows the active and inherited rules at an any given time. You will soon dread having to go back to your text editor.',
-      text_2:
+      textJS:
         'Write JavaScript in our Sublime Text-like editor. All your changes are synced with the preview, so you can write code and try it out without having to reload your browser.',
-      text_3: 'With our powerful Custom Code component, you can write HTML directly, without going through our drag and drop interface. You can also convert any piece of your page into Custom Code when you need it.',
-      text_4: 'If you have a website that you\'ve developed previously, you can import it. Just drag and drop the HTML, CSS, JS files and images into Bootstrap Studio and they will be added to your project.'
+      textHTML: 'With our powerful Custom Code component, you can write HTML directly, without going through our drag and drop interface. You can also convert any piece of your page into Custom Code when you need it.',
+      textImport: 'If you have a website that you\'ve developed previously, you can import it. Just drag and drop the HTML, CSS, JS files and images into Bootstrap Studio and they will be added to your project.'
     }
   },
 }
