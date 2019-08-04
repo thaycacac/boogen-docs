@@ -8,11 +8,13 @@
     <Beautiful />
     <Realtime />
     <EditCode />
+    <Features />
+    <Purchase />
   </div>
 </template>
 
 <script>
-import { Header , Intro , Version , Interface , Templates, Beautiful, Realtime, EditCode } from '~/components'
+import { Header , Intro , Version , Interface , Templates, Beautiful, Realtime, EditCode, Features, Purchase } from '~/components'
 
 export default {
   components: {
@@ -24,6 +26,8 @@ export default {
     Beautiful,
     Realtime,
     EditCode,
+    Features,
+    Purchase,
   },
 }
 </script>
