@@ -85,6 +85,7 @@ export default {
 @import '~/assets/scss/_mixins.scss';
 $font-weight-unit: 300;
 $border-unit: 5px;
+$zero-unit: 0;
 
 .feedback {
   margin-top: $margin-unit * 2;
@@ -128,18 +129,18 @@ $border-unit: 5px;
       }
     }
     .send-info {
-      max-width: 480px;
-      margin: 20px auto;
+      max-width: $max-width-unit * 0.8;
+      margin: $margin-unit * 0,5 auto;
       display: block;
       .info{
-        margin-right: -30px;
+        margin-right: $margin-unit * (-0.75);
         .text-input{
-          border-radius: 0;
+          border-radius: $zero-unit;
         }
       }
       .btn-send{
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-left-radius: $zero-unit;
+        border-bottom-left-radius: $zero-unit;
         border-top-right-radius: $border-unit * 4;
         border-bottom-right-radius: $border-unit * 4;
       }
