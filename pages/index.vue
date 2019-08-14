@@ -10,11 +10,13 @@
     <EditCode />
     <Features />
     <Purchase />
+    <Feedback />
+    <Footer />
   </div>
 </template>
 
 <script>
-import { Header , Intro , Version , Interface , Templates, Beautiful, Realtime, EditCode, Features, Purchase } from '~/components'
+import { Header , Intro , Version , Interface , Templates, Beautiful, Realtime, EditCode, Features, Purchase, Feedback, Footer } from '~/components'
 
 export default {
   components: {
@@ -28,6 +30,8 @@ export default {
     EditCode,
     Features,
     Purchase,
+    Feedback,
+    Footer,
   },
 }
 </script>
